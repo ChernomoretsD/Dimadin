@@ -1,0 +1,75 @@
+class Main {
+  public static void main(String[] args) {
+    
+    final int a = 11;
+    final int b = 5;
+     
+      printDivider();
+      System.out.println("Сложение");
+      printResult( add(a,b) );
+     
+      System.out.println();
+      System.out.println("Вычитание");
+      printResult( sub(a,b) );
+
+      System.out.println(); 
+      System.out.println("Умножение");
+      printResult( mul(a,b) );
+     
+      System.out.println();
+      System.out.println("Деление");
+      printResult( div(a,b) );
+      
+      System.out.println();
+      System.out.println();
+
+      System.out.println("Степень");
+      printResult( pow(a,b) );
+      printDivider();
+
+      printResult( add(a,b) + sub(a,b) * mul(a,b) / div(a,b) - pow(a,b) );
+
+      // Тут я не совсем понял как сделать эту формулу
+      // 1 + 2^3 * 3 / 4 - 5 
+      // это должно быть так sub(a,b)^mul(a,b)?????
+
+  }
+
+  static void printResult(int result) {
+    System.out.printf("result: %08d\n",result);
+ }
+
+  static void printDivider() {
+    System.out.println("################");
+ }
+  
+  static int add(int a, int b) {
+    int r = a + b;
+    return r;
+ }
+
+  static int sub(int a, int b) {
+    int r = a - b;
+    return r;
+ }
+
+  static int mul(int a, int b) {
+    int r = a * b;
+    return r;
+ }
+
+ static int div(int a, int b) {
+    int r = a / b;
+    return r;
+ }
+
+  static int pow(int v, int e) {
+    int r = 1;
+    for(int i = 1; i <= e; i++ ){
+      r = r * v;
+    }
+    return r;
+ }  
+ 
+
+}
