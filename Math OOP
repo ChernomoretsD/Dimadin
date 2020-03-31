@@ -27,11 +27,11 @@ class Main {
       printResult( pow(a,b) );
       printDivider();
 
+      System.out.println();
       printResult( add(a,b) + sub(a,b) * mul(a,b) / div(a,b) - pow(a,b) );
 
-      // Тут я не совсем понял как сделать эту формулу
-      // 1 + 2^3 * 3 / 4 - 5 
-      // это должно быть так sub(a,b)^mul(a,b)?????
+      System.out.println();
+      printResult( add( 1, mul( pow(2,3), 1 ) ) + div(a,b) - sub(a,b) );
 
   }
 
